@@ -1,12 +1,12 @@
 package com.company;
 
-public class autor {
+public class Autor {
     String nombre;
     String apellido;
     String email;
     char genero;
 
-    public autor (String nombre, String apellido, String email, char genero)
+    public Autor(String nombre, String apellido, String email, char genero)
     {
         this.nombre = nombre;
         this.apellido = apellido;

@@ -1,12 +1,12 @@
 package com.company;
 
-public class libro {
+public class Libro {
     String titulo;
     double precio;
     int stock;
-    autor autor;
+    Autor autor;
 
-    public libro (String titulo, double precio, int stock, autor autor)
+    public Libro (String titulo, double precio, int stock, Autor autor)
     {
         this.titulo = titulo;
         this.precio = precio;
@@ -38,11 +38,11 @@ public class libro {
         this.stock = stock;
     }
 
-    public com.company.autor getAutor() {
+    public com.company.Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(com.company.autor autor) {
+    public void setAutor(com.company.Autor autor) {
         this.autor = autor;
     }
 }
