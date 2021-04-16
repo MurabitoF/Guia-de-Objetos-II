@@ -1,4 +1,4 @@
-package com.company;
+package com.company.ejercicio2;
 
 import java.util.UUID;
 

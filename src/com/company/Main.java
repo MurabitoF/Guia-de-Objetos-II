@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.ejercicio2.Cliente;
+import com.company.ejercicio2.Factura;
+import com.company.ejercicio2.ItemVenta;
+
 public class Main {
 
     public static void main(String[] args) {

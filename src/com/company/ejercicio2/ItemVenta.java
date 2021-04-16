@@ -1,4 +1,4 @@
-package com.company;
+package com.company.ejercicio2;
 
 public class ItemVenta {
     private int id;
