@@ -1,12 +1,12 @@
 package com.company;
 
-public class autor {
-    String nombre;
-    String apellido;
-    String email;
-    char genero;
+public class Autor {
+    private String nombre;
+    private String apellido;
+    private String email;
+    private char genero;
 
-    public autor (String nombre, String apellido, String email, char genero)
+    public Autor(String nombre, String apellido, String email, char genero)
     {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -45,4 +45,12 @@ public class autor {
     public void setGenero(char genero) {
         this.genero = genero;
     }
+
+    public void printAutor ()
+    {
+        System.out.println("Autor: " + this.nombre + " " + this.apellido);
+        System.out.println("Email: " + this.email);
+        System.out.println("Genero: " + this.genero);
+    }
+
 }
