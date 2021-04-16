@@ -1,10 +1,12 @@
 package com.company;
 
+import javax.sound.midi.Soundbank;
+
 public class Libro {
-    String titulo;
-    double precio;
-    int stock;
-    Autor autor;
+    private String titulo;
+    private double precio;
+    private int stock;
+    private Autor autor;
 
     public Libro (String titulo, double precio, int stock, Autor autor)
     {
@@ -45,4 +47,18 @@ public class Libro {
     public void setAutor(com.company.Autor autor) {
         this.autor = autor;
     }
+
+    public void printLibro ()
+    {
+        System.out.println("Titulo: " + getTitulo());
+        System.out.println("Autor: " + getAutor());
+        System.out.println("Precio: " + getPrecio());
+        System.out.println("Stock: " + getStock());
+    }
+
+    public void printEligeLibro ()
+    {
+        System.out.println("El libro, " + getTitulo() + " de " + getAutor().getNombre() + " " + getAutor().getApellido() + ". Se vende a " + getPrecio() + " pesos.");
+    }
+
 }
