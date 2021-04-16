@@ -1,19 +1,22 @@
 package com.company;
 
 import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
 
 public class Libro {
     private String titulo;
     private double precio;
     private int stock;
     private Autor autor;
+    private Autor[] autores;
 
-    public Libro (String titulo, double precio, int stock, Autor autor)
+    public Libro (String titulo, double precio, int stock, Autor autor, Autor[] autores)
     {
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
         this.autor = autor;
+        this.autores = autores;
     }
 
     public String getTitulo() {
@@ -50,15 +53,25 @@ public class Libro {
 
     public void printLibro ()
     {
-        System.out.println("Titulo: " + getTitulo());
-        System.out.println("Autor: " + getAutor());
-        System.out.println("Precio: " + getPrecio());
-        System.out.println("Stock: " + getStock());
+        System.out.println("Titulo: " + this.titulo);
+        System.out.println("Autor: " + this.autor.getNombre() + " " + this.autor.getApellido());
+        System.out.println("Precio: " + this.precio);
+        System.out.println("Stock: " + this.stock);
     }
 
-    public void printEligeLibro ()
+    public void printDetalleLibro ()
     {
         System.out.println("El libro, " + getTitulo() + " de " + getAutor().getNombre() + " " + getAutor().getApellido() + ". Se vende a " + getPrecio() + " pesos.");
+    }
+
+    public void printAutoresLibro ()
+    {
+        System.out.print("El libro, " + getTitulo() + " de los autores ");
+        for (int i=0; i < autores.length; i++)
+        {
+            System.out.print(autores[i].getNombre() + " " + autores[i].getApellido() + " ");
+        }
+        System.out.print(". Se vende a " + this.precio + " pesos.");
     }
 
 }

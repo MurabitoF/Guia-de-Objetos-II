@@ -48,9 +48,9 @@ public class Autor {
 
     public void printAutor ()
     {
-        System.out.println("Autor: " + getNombre() + " " + getApellido());
-        System.out.println("Email: " + getEmail());
-        System.out.println("Genero: " + getGenero());
+        System.out.println("Autor: " + this.nombre + " " + this.apellido);
+        System.out.println("Email: " + this.email);
+        System.out.println("Genero: " + this.genero);
     }
 
 }
