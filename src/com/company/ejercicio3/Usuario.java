@@ -1,5 +1,7 @@
 package com.company.ejercicio3;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Usuario {
@@ -37,7 +39,7 @@ public class Usuario {
         this.genero = genero;
     }
 
-    public String getCliente(){
+    public String getUsuario(){
         return String.format("Usuario[id=%s, nombre=%s, genero=%c]",this.id.toString(), this.nombre, this.genero);
     }
 }

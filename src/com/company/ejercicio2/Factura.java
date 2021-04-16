@@ -67,10 +67,12 @@ public class Factura {
         return total;
     }
 
-    public String getFactura() {
+    @Override
+    public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         return String.format("Factura[id=%s, fecha=%s, monto=%1.2f, montoDesc=%1.2f, %s]",
-                this.idFactura.toString(), this.fecha.format(formatter), this.getTotalConDescuento(), this.calcularDescuento(this.getTotalSinDescuento()), cliente.getCliente());
+                this.idFactura.toString(), this.fecha.format(formatter), this.getTotalConDescuento(),
+                this.calcularDescuento(this.getTotalSinDescuento()), cliente.toString());
     }
 
 }
