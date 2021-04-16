@@ -3,11 +3,14 @@ package com.company;
 import com.company.ejercicio2.Cliente;
 import com.company.ejercicio2.Factura;
 import com.company.ejercicio2.ItemVenta;
+import com.company.ejercicio3.CuentaBancaria;
+import com.company.ejercicio3.Usuario;
 
 public class Main {
 
     public static void main(String[] args) {
-	    ej2();
+	    //ej2();
+        ej3();
     }
 
     public static void ej2(){
@@ -22,5 +25,18 @@ public class Main {
         factura1.agregarItem(producto2);
         factura1.agregarItem(producto3);
         System.out.println(factura1.getFactura());
+    }
+
+    public static void ej3(){
+        Usuario usuario1 = new Usuario("Franco", 'h');
+        CuentaBancaria cuentaBancaria1 = new CuentaBancaria(usuario1, 10000.00);
+
+        System.out.println(usuario1.getCliente());
+        cuentaBancaria1.depositarDinero(500.00);
+        cuentaBancaria1.extraerDinero(1500.00);
+        cuentaBancaria1.extraerDinero(15000.00);
+        cuentaBancaria1.extraerDinero(11000.00);
+
+
     }
 }
